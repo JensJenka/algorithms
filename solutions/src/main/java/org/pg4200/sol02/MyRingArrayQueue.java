@@ -30,7 +30,7 @@ public class MyRingArrayQueue<T> implements MyQueue<T>{
         if(isEmpty()){
             head = 0;
             tail = 0;
-        } else if(head <= tail){
+        } else if(head <= tail){            //means there is space
 
             if(tail < data.length - 1) {
                 //simple case
