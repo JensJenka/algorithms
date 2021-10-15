@@ -10,13 +10,13 @@ public class BinaryTreeLeftMaxDelete<K extends Comparable<K>, V> extends MyMapBi
     @Override
     protected TreeNode delete(K key, TreeNode subtreeRoot) {
 
-        if (subtreeRoot == null) {
+        if (subtreeRoot == null) {  //Checks if the current node-placement is available
             return null;
         }
 
-        int cmp = key.compareTo(subtreeRoot.key);
+        int cmp = key.compareTo(subtreeRoot.key);     //key comparer
 
-        if (cmp < 0) {
+        if (cmp < 0) {      //
             subtreeRoot.left = delete(key, subtreeRoot.left);
             return subtreeRoot;
         }
